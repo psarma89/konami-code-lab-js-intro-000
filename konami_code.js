@@ -10,10 +10,10 @@ function init() {
       index++
       if (index === code.length) {
         alert("You did it!")
-        index = 0;
+        index = 0
       }
     }else {
-      
+      index = 0
     }
   }
 
