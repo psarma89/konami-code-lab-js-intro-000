@@ -6,6 +6,7 @@ function init() {
   let index = 0;
 
   function onKeyDownHandle(e){
+    //e.stopPropagation()
     const key = parseInt(e.detail || e.which);
 
     if (key === code[index]){
