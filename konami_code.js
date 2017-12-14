@@ -4,21 +4,22 @@ function init() {
   // your code here
 
   let index = 0;
-  document.getElementByTagName('body').addEventListener('keydown', onKeyDownHandler(e))
+  document.querySelector('body').addEventListener('keydown',   function onKeyDownHandler(e) {
+      const key = parseInt(e.detail || e.which || e.location);
 
-  function onKeyDownHandler(e) {
-    const key = parseInt(e.detail || e.which || e.location);
+      if (key === code[index]) {
+        index++;
 
-    if (key === code[index]) {
-      index++;
+        if (index === code.length) {
+          alert("Hurray!");
 
-      if (index === code.length) {
-        alert("Hurray!");
-
+          index = 0;
+        }
+      } else {
         index = 0;
       }
-    } else {
-      index = 0;
     }
-  }
+  )
+
+
 }
